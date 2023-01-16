@@ -24,7 +24,7 @@ const Dcard = () => {
                   <img src={value.cover} alt='' width='100%' />
                 </div>
                 <h4>{value.name}</h4>
-                <span>{value.price}</span>
+                <span>Ksh. {value.price}</span>
               </div>
             </>
           )

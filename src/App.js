@@ -83,7 +83,6 @@ function App() {
           <>
             {/* <Sidebar /> */}
             <Routes>
-              <Route path='/landing' element={<Landing />} />
               <Route path='adminhome' element={<AdminHome />} />
               <Route path='/doctors' element={<DoctorCard />} />
               <Route path='/patients' element={<PatientCard />} />
@@ -100,7 +99,7 @@ function App() {
         <Route path='/' element={<Pages productItems={productItems} addToCart={addToCart} shopItems={shopItems}/>}   />
         <Route path='/cart' element={<Cart CartItem={CartItem} addToCart={addToCart} decreaseQty={decreaseQty} removeFromCart={removeFromCart}/>}  />
         <Route path='/login' element={<Login />} />
-
+        <Route path='/pages' element={<Landing />} />
         <Route path='/register' element={<Register />} />
         <Route path='/reset' element={<Reset />} />
         <Route path='/dashboard' element={<Dashboard />} />
