@@ -16,7 +16,7 @@ const Login = () => {
         if (loading) {
           return;
         }
-        if (user) navigate("/landing");
+        if (user) navigate("/adminhome");
       }, [user, loading]);
   
  

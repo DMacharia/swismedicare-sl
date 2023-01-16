@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import NewPatientForm from './NewPatientForm';
 import PatientContainer from './PatientContainer';
+import './patient.css'
 const patientAPI = "https://swis-medicare-eblx.onrender.com/api/v1/patients";
 
 const PatientCard = () => {
@@ -30,7 +31,7 @@ const PatientCard = () => {
         )
     }
   return (
-    <div className='actions_container' style={{width: '89%', float: 'right'}}>
+    <div className='actions_container' style={{width: '89%', float: 'right', marginTop: '10rem'}}>
         <h1 style={{color: '#001529', fontStyle: 'italic', paddingTop: '2rem'}}>Welcome to SwissMedicare!</h1>
         <h2>{patients.length} Patients Admitted</h2>
         {renderPatientView()}

@@ -11,6 +11,7 @@ const Navbar = () => {
   const [user, loading, error] = useAuthState(auth);
   const [name, setName] = useState("");
   const navigate = useNavigate();
+
   const fetchUserName = async () => {
     try {
       const q = query(collection(db, "users"), where("uid", "==", user?.uid));
@@ -22,6 +23,7 @@ const Navbar = () => {
       // alert("An error occured while fetching user data");
     }
   };
+  
   useEffect(() => {
     if (loading) return;
     if (!user) return navigate("/");
@@ -49,11 +51,17 @@ const Navbar = () => {
                 <Link to='/pages'>About Us</Link>
               </li>
               <li>
-                {!user ? <Link to='/login'>Login</Link> : <Link to='/adminhome'><p style={{
-                  color: '#0f3460',
-                  fontWeight: 'bold',
-                  fontSize: '22px'
-                }}>Admin Page</p></Link>}
+                {!user ? <Link to='/login'>Login</Link> : (
+                  user?.email === "peterparker@gmail.com" ? <Link to='/adminhome'><p style={{
+                    color: '#0f3460',
+                    fontWeight: 'bold',
+                    fontSize: '22px'
+                  }}>Admin Page</p></Link> : <Link to='/doctors' style={{
+                    color: '#0f3460',
+                    fontWeight: 'bold',
+                    fontSize: '22px'
+                  }}>doctor Page</Link>
+                )}
               </li>
               <li>
                 {user ? <Link to='/dashboard'>Logout</Link> : null}

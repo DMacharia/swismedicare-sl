@@ -28,9 +28,9 @@ const Patient = ({ patient, removePaient }) => {
           <p>Date of Birth: <span>{date_of_birth}</span></p>
           <div className='doctor_action'>
           <Link to={`/edit/${patient.id}`}>Edit</Link>
-            <button onClick={onDeleteClick} >
+            {/* <button onClick={onDeleteClick} >
               Fire
-            </button>
+            </button> */}
           </div>
         </div>
     </div>

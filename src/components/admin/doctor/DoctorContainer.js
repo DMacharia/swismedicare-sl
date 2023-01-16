@@ -4,7 +4,9 @@ import './doctor.css'
 
 const DoctorContainer = ({ doctors, removeDoctor }) => {
   return (
-    <div className='doctor_container'>
+    <div className='doctor_container' style={{
+      // marginTop: '8rem'
+    }}>
       {doctors?.map(doctor => {
         return (
           <Doctor

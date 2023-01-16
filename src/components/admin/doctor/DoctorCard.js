@@ -35,7 +35,7 @@ const DoctorCard = () => {
   }
 
   return (
-    <div className='actions_container' style={{width: '89%', float: 'right'}}>
+    <div className='actions_container' style={{width: '89%', float: 'right', marginTop: '10rem'}}>
       <h1 style={{color: '#001529', fontStyle: 'italic', paddingTop: '2rem'}}>Welcome to SwissMedicare!</h1>
      <h2>{doctors.length} Doctors on Board</h2>
       {renderDoctorView()}
