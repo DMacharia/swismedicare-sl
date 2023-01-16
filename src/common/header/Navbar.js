@@ -46,7 +46,7 @@ const Navbar = () => {
                 <Link to='/'>Home</Link>
               </li>
               <li>
-                <Link to='/pages'>pages</Link>
+                <Link to='/pages'>About Us</Link>
               </li>
               <li>
                 {!user ? <Link to='/login'>Login</Link> : <Link to='/adminhome'><p style={{
