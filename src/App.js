@@ -21,6 +21,7 @@ import PatientCard from './components/admin/patient/PatientCard';
 import Sidebar from './components/admin/Sidebar';
 import EditDoctor from './components/admin/doctor/DoctorCard';
 import NotAuthorized from './components/admin/NotAuthorized';
+import Landing from './Landing/landing';
 
 
 function App() {
@@ -82,6 +83,7 @@ function App() {
           <>
             {/* <Sidebar /> */}
             <Routes>
+              <Route path='/landing' element={<Landing />} />
               <Route path='adminhome' element={<AdminHome />} />
               <Route path='/doctors' element={<DoctorCard />} />
               <Route path='/patients' element={<PatientCard />} />
